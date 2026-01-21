@@ -5,13 +5,21 @@
   --muted: #7b7b8a;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -298,7 +306,8 @@ body {
   top: 5%;
   transform: translateX(-50%);
   width: 90%;
-  height: 90%;
+  height: auto;
+  min-height: 90%;
   padding: 0;
   background: linear-gradient(135deg, #1a2744 0%, #0f1a2e 50%, #1a2744 100%);
   border-radius: 4px;
@@ -364,13 +373,13 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding: 20px 16px;
+  padding: 32px 16px;
   text-align: center;
 }
 
 .invite-header {
   font-family: "Montserrat", sans-serif;
-  font-size: 0.7rem;
+  font-size: clamp(0.5rem, 1.2vw, 0.7rem);
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -387,7 +396,7 @@ body {
 
 .names {
   font-family: "Great Vibes", cursive;
-  font-size: 2.8rem;
+  font-size: clamp(1.4rem, 4vw, 2.8rem);
   font-weight: 400;
   color: #f5f0e6;
   margin: 8px 0;
@@ -402,7 +411,7 @@ body {
 
 .invite-subheader {
   font-family: "Cormorant Garamond", serif;
-  font-size: 0.85rem;
+  font-size: clamp(0.55rem, 1.4vw, 0.85rem);
   font-style: italic;
   color: #d4cfc4;
   margin: 8px 0;
@@ -411,7 +420,7 @@ body {
 
 .event-title {
   font-family: "Montserrat", sans-serif;
-  font-size: 0.9rem;
+  font-size: clamp(0.55rem, 1.5vw, 0.9rem);
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -450,14 +459,14 @@ body {
 
 .details p {
   font-family: "Cormorant Garamond", serif;
-  font-size: 0.85rem;
+  font-size: clamp(0.5rem, 1.4vw, 0.85rem);
   color: #f5f0e6;
   margin: 5px 0;
 }
 
 .details .label {
   font-family: "Montserrat", sans-serif;
-  font-size: 0.6rem;
+  font-size: clamp(0.4rem, 1vw, 0.6rem);
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -468,7 +477,7 @@ body {
 
 .invite .rsvp {
   font-family: "Cormorant Garamond", serif;
-  font-size: 0.75rem;
+  font-size: clamp(0.5rem, 1.2vw, 0.75rem);
   font-style: italic;
   color: #c0c0c0;
   margin: 8px 0 0 0;
@@ -485,81 +494,373 @@ body {
   visibility: visible;
 }
 
-@media (max-width: 520px) {
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
   .envelope {
-    width: 80vw;
-    height: 52vw;
+    width: 60vw;
+    height: 38vw;
   }
   .flap {
-    border-left: 40vw solid transparent;
-    border-right: 40vw solid transparent;
-    border-bottom: 24vw solid transparent;
-    border-top: 29vw solid #e8e8e8;
+    border-left: 30vw solid transparent;
+    border-right: 30vw solid transparent;
+    border-bottom: 18vw solid transparent;
+    border-top: 22vw solid #e8e8e8;
   }
   .pocket {
-    border-left: 40vw solid #fafafa;
-    border-right: 40vw solid #fafafa;
-    border-bottom: 26vw solid #f0f0f0;
-    border-top: 26vw solid transparent;
+    border-left: 30vw solid #fafafa;
+    border-right: 30vw solid #fafafa;
+    border-bottom: 19vw solid #f0f0f0;
+    border-top: 19vw solid transparent;
   }
   .envelope.pull .invite {
-    transform: translateX(-50%) translateY(-55vw);
+    transform: translateX(-50%) translateY(-40vw);
   }
   .seal {
-    width: 15vw;
-    height: 15vw;
-    top: 18vw;
+    width: 60px;
+    height: 60px;
+    top: 60px;
   }
+}
 
+/* Tablets */
+@media (max-width: 768px) {
+  .scene {
+    padding: 24px 0 10vh;
+  }
+  .envelope-wrapper {
+    height: 320px;
+  }
+  .envelope {
+    width: 70vw;
+    height: 45vw;
+  }
+  .flap {
+    border-left: 35vw solid transparent;
+    border-right: 35vw solid transparent;
+    border-bottom: 21vw solid transparent;
+    border-top: 25vw solid #e8e8e8;
+  }
+  .pocket {
+    border-left: 35vw solid #fafafa;
+    border-right: 35vw solid #fafafa;
+    border-bottom: 22.5vw solid #f0f0f0;
+    border-top: 22.5vw solid transparent;
+  }
+  .envelope.pull .invite {
+    transform: translateX(-50%) translateY(-48vw);
+  }
+  .seal {
+    width: 55px;
+    height: 55px;
+    top: 50px;
+  }
   .names {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
+  .invite-header {
+    font-size: 0.65rem;
+  }
+  .invite-subheader {
+    font-size: 0.75rem;
+  }
+  .event-title {
+    font-size: 0.8rem;
+  }
+  .details p {
+    font-size: 0.75rem;
+  }
+  .details .label {
+    font-size: 0.55rem;
+  }
+  .invite .rsvp {
+    font-size: 0.7rem;
+  }
+  .corner {
+    width: 24px;
+    height: 24px;
+  }
+  .corner-tl,
+  .corner-tr {
+    top: 10px;
+  }
+  .corner-bl,
+  .corner-br {
+    bottom: 10px;
+  }
+  .corner-tl,
+  .corner-bl {
+    left: 10px;
+  }
+  .corner-tr,
+  .corner-br {
+    right: 10px;
+  }
+  .invite-content {
+    padding: 28px 14px;
+  }
+}
 
+/* Mobile phones */
+@media (max-width: 520px) {
+  .scene {
+    padding: 16px 0 8vh;
+    min-height: 100svh; /* Use small viewport height for mobile */
+  }
+  .envelope-wrapper {
+    height: 280px;
+  }
+  .envelope {
+    width: 85vw;
+    height: 55vw;
+  }
+  .flap {
+    border-left: 42.5vw solid transparent;
+    border-right: 42.5vw solid transparent;
+    border-bottom: 25.5vw solid transparent;
+    border-top: 31vw solid #e8e8e8;
+  }
+  .pocket {
+    border-left: 42.5vw solid #fafafa;
+    border-right: 42.5vw solid #fafafa;
+    border-bottom: 27.5vw solid #f0f0f0;
+    border-top: 27.5vw solid transparent;
+  }
+  .envelope.pull .invite {
+    transform: translateX(-50%) translateY(-58vw);
+  }
+  .seal {
+    width: 14vw;
+    height: 14vw;
+    top: 16vw;
+  }
+  .names {
+    font-size: 1.6rem;
+  }
   .invite-border {
     inset: 5px;
   }
-
   .corner {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
-
   .corner-tl,
   .corner-tr {
     top: 8px;
   }
-
   .corner-bl,
   .corner-br {
     bottom: 8px;
   }
-
   .corner-tl,
   .corner-bl {
     left: 8px;
   }
-
   .corner-tr,
   .corner-br {
     right: 8px;
   }
-
   .invite-content {
-    padding: 12px 10px;
+    padding: 24px 10px;
   }
-
-  .invite-header,
-  .invite-subheader,
-  .details p,
-  .rsvp {
-    font-size: 0.65rem;
+  .invite-header {
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 4px;
   }
-
+  .invite-subheader {
+    font-size: 0.6rem;
+    margin: 4px 0;
+  }
   .event-title {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+    margin: 6px 0;
   }
-
+  .ornament-line {
+    width: 60%;
+    margin: 8px 0;
+  }
+  .line-diamond {
+    font-size: 0.4rem;
+    margin: 0 5px;
+  }
+  .details {
+    margin: 4px 0;
+  }
+  .details p {
+    font-size: 0.6rem;
+    margin: 3px 0;
+  }
   .details .label {
+    font-size: 0.45rem;
+    letter-spacing: 0.1em;
+  }
+  .invite .rsvp {
+    font-size: 0.55rem;
+    margin-top: 4px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .scene {
+    padding: 12px 0 6vh;
+  }
+  .envelope-wrapper {
+    height: 240px;
+  }
+  .envelope {
+    width: 90vw;
+    height: 58vw;
+  }
+  .flap {
+    border-left: 45vw solid transparent;
+    border-right: 45vw solid transparent;
+    border-bottom: 27vw solid transparent;
+    border-top: 33vw solid #e8e8e8;
+  }
+  .pocket {
+    border-left: 45vw solid #fafafa;
+    border-right: 45vw solid #fafafa;
+    border-bottom: 29vw solid #f0f0f0;
+    border-top: 29vw solid transparent;
+  }
+  .envelope.pull .invite {
+    transform: translateX(-50%) translateY(-62vw);
+  }
+  .seal {
+    width: 13vw;
+    height: 13vw;
+    top: 15vw;
+  }
+  .names {
+    font-size: 1.3rem;
+  }
+  .invite-border {
+    inset: 4px;
+  }
+  .corner {
+    width: 12px;
+    height: 12px;
+  }
+  .corner-tl,
+  .corner-tr {
+    top: 6px;
+  }
+  .corner-bl,
+  .corner-br {
+    bottom: 6px;
+  }
+  .corner-tl,
+  .corner-bl {
+    left: 6px;
+  }
+  .corner-tr,
+  .corner-br {
+    right: 6px;
+  }
+  .invite-content {
+    padding: 20px 8px;
+  }
+  .invite-header {
     font-size: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+  .invite-subheader {
+    font-size: 0.55rem;
+  }
+  .event-title {
+    font-size: 0.55rem;
+  }
+  .details p {
+    font-size: 0.55rem;
+  }
+  .details .label {
+    font-size: 0.4rem;
+  }
+  .invite .rsvp {
+    font-size: 0.5rem;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+  .scene {
+    min-height: auto;
+    padding: 16px 0 24px;
+    align-items: center;
+  }
+  .envelope-wrapper {
+    height: auto;
+  }
+  .envelope {
+    width: 45vw;
+    height: 29vw;
+  }
+  .flap {
+    border-left: 22.5vw solid transparent;
+    border-right: 22.5vw solid transparent;
+    border-bottom: 13.5vw solid transparent;
+    border-top: 16.5vw solid #e8e8e8;
+  }
+  .pocket {
+    border-left: 22.5vw solid #fafafa;
+    border-right: 22.5vw solid #fafafa;
+    border-bottom: 14.5vw solid #f0f0f0;
+    border-top: 14.5vw solid transparent;
+  }
+  .envelope.pull .invite {
+    transform: translateX(-50%) translateY(-30vw);
+  }
+  .seal {
+    width: 8vw;
+    height: 8vw;
+    top: 9vw;
+  }
+  .names {
+    font-size: 1.4rem;
+  }
+  .invite-header {
+    font-size: 0.5rem;
+  }
+  .invite-subheader {
+    font-size: 0.55rem;
+  }
+  .event-title {
+    font-size: 0.55rem;
+  }
+  .details p {
+    font-size: 0.5rem;
+  }
+  .details .label {
+    font-size: 0.4rem;
+  }
+  .invite .rsvp {
+    font-size: 0.5rem;
+  }
+  .corner {
+    width: 14px;
+    height: 14px;
+  }
+  .corner-tl,
+  .corner-tr {
+    top: 6px;
+  }
+  .corner-bl,
+  .corner-br {
+    bottom: 6px;
+  }
+  .corner-tl,
+  .corner-bl {
+    left: 6px;
+  }
+  .corner-tr,
+  .corner-br {
+    right: 6px;
+  }
+  .ornament-line {
+    margin: 6px 0;
+  }
+  .details {
+    margin: 4px 0;
   }
 }
