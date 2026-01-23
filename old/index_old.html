@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Invitation — Jesús & Claudia 25th Anniversary</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- <header class="hero"></header>
+
+    <main class="container main-grid"></main>
+
+    <footer class="footer">
+      <div class="container"></div>
+    </footer> -->
+    <div class="scene">
+      <div class="envelope-wrapper">
+        <div class="envelope" id="envelope">
+          <div class="front flap"></div>
+          <div class="front pocket"></div>
+          <img
+            class="seal"
+            src="assets/realistic silver wax.png"
+            alt="Wax seal"
+          />
+          <article class="invite" role="article">
+            <div class="invite-border">
+              <!-- Decorative corner flourishes -->
+              <div class="corner corner-tl"></div>
+              <div class="corner corner-tr"></div>
+              <div class="corner corner-bl"></div>
+              <div class="corner corner-br"></div>
+
+              <div class="invite-content">
+                <p class="invite-header">Together with their families</p>
+                <h1 class="names">
+                  Jesús <span class="ampersand">&</span> Claudia
+                </h1>
+                <p class="invite-subheader">
+                  request the pleasure of your company<br />to celebrate their
+                </p>
+                <h2 class="event-title">25th Wedding Anniversary</h2>
+                <div class="ornament-line">
+                  <span class="line-left"></span>
+                  <span class="line-diamond">◆</span>
+                  <span class="line-right"></span>
+                </div>
+                <div class="details">
+                  <p class="date"><span class="label">Date</span>[date here]</p>
+                  <p class="time"><span class="label">Time</span>[time here]</p>
+                  <p class="location">
+                    <span class="label">Location</span>[location here]
+                  </p>
+                </div>
+                <p class="rsvp">Kindly RSVP by [date]</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("load", () => {
+        const env = document.getElementById("envelope");
+        // envelope appears
+        setTimeout(() => env.classList.add("appear"), 300);
+        // seal hides first
+        setTimeout(() => env.classList.add("seal-hide"), 1200);
+        // flap opens after seal is hidden
+        setTimeout(() => env.classList.add("open"), 2200);
+        // invitation pulled out (sooner after flap opens)
+        setTimeout(() => env.classList.add("pull"), 3200);
+      });
+    </script>
+    <script>
+      (function () {
+        const key = "titos-theme";
+        const btn = document.querySelector(".theme-toggle");
+        const root = document.documentElement;
+        function apply(theme) {
+          root.dataset.theme = theme;
+          btn.textContent = theme === "dark" ? "🌙" : "☀️";
+        }
+        const saved = localStorage.getItem(key) || "light";
+        apply(saved);
+        btn.addEventListener("click", () => {
+          const next = root.dataset.theme === "dark" ? "light" : "dark";
+          apply(next);
+          localStorage.setItem(key, next);
+        });
+      })();
+    </script>
+  </body>
+</html>

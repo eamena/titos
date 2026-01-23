@@ -3,98 +3,436 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Invitation — Jesús & Claudia 25th Anniversary</title>
+    <link rel="stylesheet" href="assets/css/starter.css" />
+    <title>Claudia & Jesus</title>
+    <!-- CSS only -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/starter.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/d67b9ebfc7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@1,100;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/d67b9ebfc7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
+
   <body>
-    <!-- <header class="hero"></header>
-
-    <main class="container main-grid"></main>
-
-    <footer class="footer">
-      <div class="container"></div>
-    </footer> -->
-    <div class="scene">
-      <div class="envelope-wrapper">
-        <div class="envelope" id="envelope">
-          <div class="front flap"></div>
-          <div class="front pocket"></div>
-          <img
-            class="seal"
-            src="assets/realistic silver wax.png"
-            alt="Wax seal"
-          />
-          <article class="invite" role="article">
-            <div class="invite-border">
-              <!-- Decorative corner flourishes -->
-              <div class="corner corner-tl"></div>
-              <div class="corner corner-tr"></div>
-              <div class="corner corner-bl"></div>
-              <div class="corner corner-br"></div>
-
-              <div class="invite-content">
-                <p class="invite-header">Together with their families</p>
-                <h1 class="names">
-                  Jesús <span class="ampersand">&</span> Claudia
-                </h1>
-                <p class="invite-subheader">
-                  request the pleasure of your company<br />to celebrate their
-                </p>
-                <h2 class="event-title">25th Wedding Anniversary</h2>
-                <div class="ornament-line">
-                  <span class="line-left"></span>
-                  <span class="line-diamond">◆</span>
-                  <span class="line-right"></span>
+    <div class="col-md-12 mx-auto">
+      <div class="container">
+        <nav id="navbar" class="navbar navbar-light">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img
+                clas="monograma"
+                src="old/assets/minimal elegant silv.png"
+                style="max-width: 100px"
+              />
+            </a>
+            <nav class="navbar navbar-expand-lg">
+              <div class="container-fluid">
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#detalles">Detalles</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#iglesia">Iglesia</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#recepcion">Recepcion</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#hotel">Hotel</a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="details">
-                  <p class="date"><span class="label">Date</span>[date here]</p>
-                  <p class="time"><span class="label">Time</span>[time here]</p>
-                  <p class="location">
-                    <span class="label">Location</span>[location here]
-                  </p>
-                </div>
-                <p class="rsvp">Kindly RSVP by [date]</p>
               </div>
-            </div>
-          </article>
-        </div>
+            </nav>
+          </div>
+        </nav>
       </div>
     </div>
-
+    <section id="home" class="hero py-5">
+      <div class="hero-txt">
+        <h1>Claudia</h1>
+        <h2>&</h2>
+        <h1>Jesus</h1>
+        <p>Julio 18, 2026</p>
+      </div>
+    </section>
+    <section id="detalles" class="detalles py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div>
+              <span class="material-symbols-outlined">calendar_today</span>
+            </div>
+            <h2>Cuándo</h2>
+            <p>Sabado 18 de Julio, 2026</p>
+            <div>
+              <a href="#" title="" target="_blank"><button>RSVP</button></a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div>
+              <span class="material-symbols-outlined">person</span>
+            </div>
+            <h2>Quién</h2>
+            <p>Familiares y Amigos Cercanos</p>
+          </div>
+          <div class="col-md-4">
+            <div>
+              <span class="material-symbols-outlined">map</span>
+            </div>
+            <h2>Lugar</h2>
+            <p>Ciudad de Mexico</p>
+            <div>
+              <a href="#" target="_blank"><button>Ver en Mapa</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="iglesia" class="iglesia">
+      <div class="d-none d-md-block">
+        <div class="row">
+          <div class="col-md-6 iglesia-bg align-middle">
+            <img src="assets/img/img3-1.jpg" class="img-fluid" />
+          </div>
+          <div class="col-md-6 align-middle center-text-inisde-column">
+            <div>
+              <h3>Ceremonia</h3>
+              <p>
+                Basílica de San Felipe Neri <br />16 de Diciembre, 2022<br />
+                5:00 pm
+              </p>
+              <p>
+                Calle San Felipe 544, Zona Centro<br />
+                44100 Guadalajara, Jal. México
+              </p>
+              <a href="https://goo.gl/maps/4yGpM7c8BXGDPzpq6" target="_blank">
+                <button>Ver en mapa</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-sm-block d-md-none">
+        <div class="row">
+          <div class="col-sm-12 iglesia-bg align-middle">
+            <img src="assets/img/img3-1.jpg" class="img-fluid" />
+          </div>
+          <div class="col-sm-12 align-middle center-text-inisde-column">
+            <div>
+              <h3>Ceremonia</h3>
+              <p>
+                Basílica de <br />San Felipe Neri <br />16 de Diciembre, 2022<br />
+                5:00 pm
+              </p>
+              <p>
+                Calle San Felipe 544, Zona Centro<br />
+                44100 Guadalajara, Jal. México
+              </p>
+              <a href="https://goo.gl/maps/4yGpM7c8BXGDPzpq6" target="_blank">
+                <button>Ver en mapa</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="recepcion" class="recepcion">
+      <div class="d-none d-md-block">
+        <div class="row">
+          <div class="col-md-6 align-middle center-text-inisde-column">
+            <div>
+              <h3>Recepción</h3>
+              <p>
+                Acompañanos<br />Ex-Convento De Santa Teresa<br />(no niños)<br />Código
+                de Vestimenta: Formal<br />6:30 pm
+              </p>
+              <p>
+                Calle Donato Guerra 25, Zona Centro <br />44100 Guadalajara,
+                Jal. México
+              </p>
+              <a href="https://g.page/Exconvento-st?share" target="_blank">
+                <button>Ver en mapa</button>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 iglesia-bg align-middle">
+            <img src="assets/img/img6.jpg" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+      <div class="d-sm-block d-md-none">
+        <div class="row">
+          <div class="col-sm-12 iglesia-bg align-middle">
+            <img src="assets/img/img6.jpg" class="img-fluid" />
+          </div>
+          <div class="col-sm-12 align-middle center-text-inisde-column">
+            <div>
+              <h3>Recepción</h3>
+              <p>
+                Acompañanos <br />Ex-Convento De Santa Teresa<br />(no niños)<br />Código
+                de Vestimenta: Formal<br />6:30 pm
+              </p>
+              <p>
+                Calle Donato Guerra 25, Zona Centro <br />44100 Guadalajara,
+                Jal. México
+              </p>
+              <a href="https://g.page/Exconvento-st?share" target="_blank">
+                <button>Ver en mapa</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="hotel" class="hotel">
+      <div class="d-none d-md-block">
+        <div class="row">
+          <div class="col-md-6 iglesia-bg align-middle">
+            <img src="assets/img/img7.jpg" class="img-fluid" />
+          </div>
+          <div class="col-md-6 align-middle center-text-inisde-column">
+            <div>
+              <h3>Hospedaje</h3>
+              <p>
+                Les recomendamos <br />Hotel DoubleTree by Hilton Guadalajara.
+              </p>
+              <p>
+                Calle Colón 73, Zona Centro<br />44100 Guadalajara, Jal. México
+              </p>
+              <a
+                href="https://www.hilton.com/en/attend-my-event/gdldtdt-bse-98e5cc79-ecac-4b9d-add8-4b8ca160d25c/"
+                target="_blank"
+              >
+                <button>Reservación</button>
+              </a>
+              <div class="my-3">
+                <a href="https://goo.gl/maps/6kgsiS2KrC3JSAoY8" target="_blank">
+                  <button>Ver en mapa</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-sm-block d-md-none">
+        <div class="row">
+          <div class="col-sm-12 iglesia-bg align-middle">
+            <img src="assets/img/img7.jpg" class="img-fluid" />
+          </div>
+          <div class="col-sm-12 align-middle center-text-inisde-column">
+            <div>
+              <h3>Hospedaje</h3>
+              <p>
+                Les recomendamos <br />Hotel DoubleTree by Hilton Guadalajara.
+              </p>
+              <p>
+                Calle Colón 73, Zona Centro<br />44100 Guadalajara, Jal. México
+              </p>
+              <a
+                href="https://www.hilton.com/en/attend-my-event/gdldtdt-bse-98e5cc79-ecac-4b9d-add8-4b8ca160d25c/"
+                target="_blank"
+              >
+                <button>Reservación</button>
+              </a>
+              <div class="my-3">
+                <a href="https://goo.gl/maps/6kgsiS2KrC3JSAoY8" target="_blank">
+                  <button>Ver en mapa</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section id="recepcion" class="recepcion">
+       <div class="d-none d-md-block">
+        <div class="row">
+          <div class="col-md-6 align-middle center-text-inisde-column">
+            <div>
+              <h3>Luna de Miel</h3>
+              <p>Gracias por hacerla inolvidable</p>
+              <form
+                action="https://www.paypal.com/donate"
+                method="post"
+                target="_top"
+              >
+                <input type="hidden" name="business" value="Q22GXJ5D8USNW" />
+                <input type="hidden" name="no_recurring" value="1" />
+                <input
+                  type="hidden"
+                  name="item_name"
+                  value="Gracias por hacerla inolvidable"
+                />
+                <input type="hidden" name="currency_code" value="USD" />
+                <input
+                  type="image"
+                  src="https://www.paypalobjects.com/es_XC/i/btn/btn_donate_LG.gif"
+                  border="0"
+                  name="submit"
+                  title="PayPal - The safer, easier way to pay online!"
+                  alt="Donar con el botón PayPal"
+                />
+                <img alt="" border="0" src="https://www.paypal.com/es_US/i/scr/pixel.gif" width="1" height="1" />
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6 iglesia-bg align-middle">
+            <img src="assets/img/img8.jpg" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+      <div class="d-sm-block d-md-none">
+        <div class="row">
+          <div class="col-sm-12 iglesia-bg align-middle">
+            <img src="assets/img/img8.jpg" class="img-fluid" />
+          </div>
+          <div class="col-sm-12 align-middle center-text-inisde-column">
+            <div>
+              <h3>Luna de Miel</h3>
+              <p>Gracias por hacerla inolvidable</p>
+              <form
+                action="https://www.paypal.com/donate"
+                method="post"
+                target="_top"
+              >
+                <input type="hidden" name="business" value="Q22GXJ5D8USNW" />
+                <input type="hidden" name="no_recurring" value="1" />
+                <input
+                  type="hidden"
+                  name="item_name"
+                  value="Gracias por hacerla inolvidable"
+                />
+                <input type="hidden" name="currency_code" value="USD" />
+                <input
+                  type="image"
+                  src="https://www.paypalobjects.com/es_XC/i/btn/btn_donate_LG.gif"
+                  border="0"
+                  name="submit"
+                  title="PayPal - The safer, easier way to pay online!"
+                  alt="Donar con el botón PayPal"
+                />
+                <img alt="" border="0" src="https://www.paypal.com/es_US/i/scr/pixel.gif" width="1" height="1" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </section>-->
+    <hr class="my-1" />
+    <footer class="text-center">
+      <!-- <div class="cartoon">
+        <img src="assets/img/img9.jpg" class="img-fluid" />
+      </div> -->
+      <p class="text-muted">Claudia & Jesus 2026</p>
+    </footer>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script type="module" src="assets/js/starter.js"></script>
     <script>
-      window.addEventListener("load", () => {
-        const env = document.getElementById("envelope");
-        // envelope appears
-        setTimeout(() => env.classList.add("appear"), 300);
-        // seal hides first
-        setTimeout(() => env.classList.add("seal-hide"), 1200);
-        // flap opens after seal is hidden
-        setTimeout(() => env.classList.add("open"), 2200);
-        // invitation pulled out (sooner after flap opens)
-        setTimeout(() => env.classList.add("pull"), 3200);
-      });
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      // Get the navbar
+      var navbar = document.getElementById("navbar");
+
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
     </script>
     <script>
-      (function () {
-        const key = "titos-theme";
-        const btn = document.querySelector(".theme-toggle");
-        const root = document.documentElement;
-        function apply(theme) {
-          root.dataset.theme = theme;
-          btn.textContent = theme === "dark" ? "🌙" : "☀️";
+      // Set the date we're counting down to
+      var countDownDate = new Date("Dec 16, 2022 17:00:00").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function () {
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML =
+          days + " " + hours + " " + minutes + " ";
+
+        // If the count down is over, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
         }
-        const saved = localStorage.getItem(key) || "light";
-        apply(saved);
-        btn.addEventListener("click", () => {
-          const next = root.dataset.theme === "dark" ? "light" : "dark";
-          apply(next);
-          localStorage.setItem(key, next);
-        });
-      })();
+      }, 1000);
     </script>
   </body>
 </html>
