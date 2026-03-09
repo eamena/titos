@@ -57,13 +57,13 @@
       <div class="container">
         <nav id="navbar" class="navbar navbar-light">
           <div class="container">
-            <a class="navbar-brand" href="#">
-              <img
-                clas="monograma"
-                src="old/assets/minimal elegant silv.png"
-                style="max-width: 100px"
-              />
-            </a>
+            <!-- <a class="navbar-brand" href="#"> -->
+            <img
+              class="monograma"
+              src="old/assets/minimal elegant silv.png"
+              style="max-width: 100px"
+            />
+            <!-- </a> -->
             <nav class="navbar navbar-expand-lg">
               <div class="container-fluid">
                 <button
@@ -93,6 +93,9 @@
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#hotel">Hotel</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#excursion">Excursión</a>
                     </li>
                   </ul>
                 </div>
@@ -270,9 +273,9 @@
                 Tabacalera, Cuauhtémoc, 06030 <br />Ciudad de México, CDMX,
                 Mexico
               </p>
-              <!-- <a href="#" target="_blank">
-                <button>Reservación</button>
-              </a> -->
+              <button data-bs-toggle="modal" data-bs-target="#reservacionModal">
+                Hacer Reservación
+              </button>
               <div class="my-3">
                 <a
                   href="https://maps.app.goo.gl/npuMcZ4vTb4EZMGJ8"
@@ -299,9 +302,9 @@
                 Tabacalera, Cuauhtémoc, 06030 <br />Ciudad de México, CDMX,
                 Mexico
               </p>
-              <!-- <a href="#" target="_blank">
-                <button>Reservación</button>
-              </a> -->
+              <button data-bs-toggle="modal" data-bs-target="#reservacionModal">
+                Hacer Reservación
+              </button>
               <div class="my-3">
                 <a
                   href="https://maps.app.goo.gl/npuMcZ4vTb4EZMGJ8"
@@ -315,44 +318,142 @@
         </div>
       </div>
     </section>
-    <section id="recepcion" class="recepcion">
+    <section id="excursion" class="excursion">
       <div class="d-none d-md-block">
         <div class="row">
           <div class="col-md-6 align-middle center-text-inisde-column">
-            <div>
+            <div class="text-center">
               <h3>Excursión</h3>
-              <p>Acompáñanos en una excursión especial</p>
+              <p class="text-center">Acompáñanos en una excursión especial</p>
               <div class="my-3">
-                <a href="#" target="_blank">
-                  <button>Más información</button>
-                </a>
+                <button data-bs-toggle="modal" data-bs-target="#excursionModal">
+                  Más información
+                </button>
               </div>
             </div>
           </div>
           <div class="col-md-6 iglesia-bg align-middle">
-            <img src="assets/img/excursion.jpg" class="img-fluid" />
+            <img src="assets/img/taxco.jpg" class="img-fluid" />
           </div>
         </div>
       </div>
       <div class="d-sm-block d-md-none">
         <div class="row">
           <div class="col-sm-12 iglesia-bg align-middle">
-            <img src="assets/img/excursion.jpg" class="img-fluid" />
+            <img src="assets/img/taxco.jpg" class="img-fluid" />
           </div>
           <div class="col-sm-12 align-middle center-text-inisde-column">
             <div>
               <h3>Excursión</h3>
               <p>Acompáñanos en una excursión especial</p>
               <div class="my-3">
-                <a href="#" target="_blank">
-                  <button>Más información</button>
-                </a>
+                <button data-bs-toggle="modal" data-bs-target="#excursionModal">
+                  Más información
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- Modal Excursión -->
+    <div
+      class="modal fade"
+      id="excursionModal"
+      tabindex="-1"
+      aria-labelledby="excursionModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="excursionModalLabel">Excursiones</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            🏛 Jueves - Centro Histórico Recorrido con transporte privado y guía
+            certificado. <br />
+            🌄 Viernes - Basílica de Guadalupe + Teotihuacán.<br />
+            Transporte privado, guía certificado y entradas incluidas. <br />
+            💒 Sábado - Traslado redondo a la ceremonia. <br />
+            🌺 Domingo - Noche en Coyoacán. Transporte redondo.<br />
+            <hr />
+            💰 Costo por persona: $1,950 MXN<br />
+            🔐 Reserva tu espacio con el 50%<br />
+            📅 Fecha límite para garantizar servicios: 25 de marzo ✨<br />
+            <hr />
+            <div class="modal-header">
+              <h5 class="modal-title" id="excursionModalLabel">
+                EXPERIENCIAS OPCIONALES*
+              </h5>
+            </div>
+            <div class="modal-body">
+              Lunes 20 de julio - Visita a Taxco, Guerrero: $650 MXN por
+              persona.<br />
+              Martes 21 de julio - Visita a Val'Quirico: $850 MXN por persona.
+              <br />
+            </div>
+            <div>
+              📩 Para registrarte o recibir más información, puedes hacerlo
+              aquí: 👉
+              <a href="https://wa.link/8msbf4" target="_blank"
+                >https://wa.link/8msbf4</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Reservación -->
+    <div
+      class="modal fade"
+      id="reservacionModal"
+      tabindex="-1"
+      aria-labelledby="reservacionModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="reservacionModalLabel">
+              Para hacer tu reservación
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Las reservaciones individuales las podrán hacer directamente al
+              Departamento de Reservaciones del hotel, no se te olvide mencionar
+              que vas a la boda de Claudia y Jesús para que te den la tarifa
+              especial. <br />
+              Teléfono: <a href="tel:+525551285000">(+52 55) 51285000</a> <br />
+              Email:
+              <a href="mailto:mexicoreforma.res3@barcelo.com"
+                >mexicoreforma.res3@barcelo.com</a
+              >
+              o
+              <a href="mailto:mexicoreforma.telefono2@barcelo.com"
+                >mexicoreforma.telefono2@barcelo.com</a
+              >
+            </p>
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
     <hr class="my-1" />
     <footer class="text-center">
       <!-- <div class="cartoon">

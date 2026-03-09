@@ -144,6 +144,23 @@ h3 {
   object-fit: cover;
   object-position: 50% 50%;
 }
+.excursion {
+  text-align: center;
+}
+.excursion button {
+  border-radius: 5px;
+  padding: 5px 10px;
+  background: transparent;
+  font-size: 16px;
+  border: #000 2px solid;
+  color: #958653 !important;
+}
+.excursion img {
+  width: 1000px;
+  height: 500px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
 .center-text-inisde-column {
   display: flex;
   justify-content: center;
